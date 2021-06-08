@@ -1,0 +1,25 @@
+@{
+  ViewData["Title"] = "Home Page";
+}
+@model TravelClient.Models.Destination
+
+<div class="text-center">
+  @Html.DisplayFor(model => model.DestinationName)
+</div>
+@* <h1 class="display-4">@Model.DestinationName</h1> *@
+
+<!-- (Destination destination in Model) -->
+@Html.Hidden("DestinationId")
+
+@* <ol>
+  <ul>
+  <li>Id: @Model.DestinationId</li>
+  <li>Name: @Model.DestinationName</li>
+  <li>Country: @Model.Country</li>
+  <li>State or Province: @Model.StateProvince</li>
+  <li>City: @Model.Category</li>
+  <li>Rating: @Model.Rating</li>
+  <li>Description: @Model.DestinationDescription</li>
+  </ul>
+  <hr />
+  </ol> *@
