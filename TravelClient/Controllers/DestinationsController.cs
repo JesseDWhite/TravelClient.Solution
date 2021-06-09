@@ -32,7 +32,7 @@ namespace TravelClient.Controllers
       return View(thisDestinations);
     }
     [HttpPost]
-    public IActionResult Details(int id, Destination destination) // Maybe edit?
+    public IActionResult Details(int id, Destination destination)
     {
       destination.DestinationId = id;
       Destination.Put(destination);
