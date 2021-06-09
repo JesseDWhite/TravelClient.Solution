@@ -1,0 +1,26 @@
+@{
+  ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+  <h1 class="display-4">Welcome</h1>
+
+</div>
+<ol>
+  @foreach (Destination destination in Model)
+  {
+    <ul>
+      <li>Id: @destination.DestinationId</li>
+      <li>Name: @destination.DestinationName</li>
+      <li>Country: @destination.Country</li>
+      <li>State or Province: @destination.StateProvince</li>
+      <li>City: @destination.Category</li>
+      <li>Rating: @destination.Rating</li>
+      <li>Description: @destination.DestinationDescription</li>
+    </ul>
+    <a href="/Destinations/Details/@(destination.DestinationId)">
+      <p>View Details</p>
+    </a>
+    <hr />
+  }
+</ol>

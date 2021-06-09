@@ -15,15 +15,9 @@ namespace TravelClient.Controllers
   {
     public IActionResult Index()
     {
-      return View();
+      var allDestinations = Destination.GetDestinations();
+      return View(allDestinations);
     }
-
-    public IActionResult Details(int id)
-    {
-      var thisDestinations = Destination.GetDetails(id);
-      return View(thisDestinations);
-    }
-
     //this creates a new instance of destination
     [HttpPost]
     public IActionResult Index(Destination destination)
@@ -31,18 +25,33 @@ namespace TravelClient.Controllers
       Destination.Post(destination);
       return RedirectToAction("Index");
     }
+
+    public IActionResult Details(int id)
+    {
+      var thisDestinations = Destination.GetDetails(id);
+      return View(thisDestinations);
+    }
+    [HttpPost]
+    public IActionResult Details(int id, Destination destination) // Maybe edit?
+    {
+      destination.DestinationId = id;
+      Destination.Put(destination);
+      return RedirectToAction("Details", id);
+    }
+
     public IActionResult Edit(int id)
     {
       var destination = Destination.GetDetails(id);
       return View(destination);
     }
     [HttpPost]
-    public IActionResult Details(int id, Destination destination)
+    public IActionResult Edit(int id, Destination destination)
     {
       destination.DestinationId = id;
       Destination.Put(destination);
-      return RedirectToAction("Details", id);
+      return RedirectToAction("Edit", id);
     }
+
     public IActionResult Delete(int id)
     {
       Destination.Delete(id);

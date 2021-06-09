@@ -13,9 +13,17 @@
     <li>Name: @Model.DestinationName</li>
     <li>Country: @Model.Country</li>
     <li>State or Province: @Model.StateProvince</li>
-    <li>City: @Model.Category</li>
+    <li>City: @Model.City</li>
+    <li>Category: @Model.Category</li>
     <li>Rating: @Model.Rating</li>
     <li>Description: @Model.DestinationDescription</li>
   </ul>
   <hr />
 </ol>
+<a href="/Destinations/Edit/@(Model.DestinationId)">
+  <p>Edit</p>
+</a>
+
+<a href="/Destinations/Index">
+  <p>👈 Go Back</p>
+</a>
