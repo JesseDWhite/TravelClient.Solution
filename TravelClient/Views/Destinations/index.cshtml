@@ -5,6 +5,39 @@
 <div class="text-center">
   <h1 class="display-4">Welcome</h1>
 
+@* <div class="text-center">
+  <h1 class="display-4">Edit @Model.DestinationName</h1>
+</div> *@
+
+@* <form action="/Destinations/Details/@(Model.DestinationId)" method="post">
+  <label for="name">Destination Name</label>
+  <input type="text" name="DestinationName" id="DestinationName" value="@(Model.DestinationName)" class="form-control">
+  <label for="state">State of Province</label>
+  <input type="text" name="state" id="state" value="@(Model.StateProvince)" class="form-control">
+  <label for="city">City</label>
+  <input type="text" name="city" id="city" value="@(Model.City)" class="form-control">
+  <label for="category">Category</label>
+  <select name="category" id="category" value="@(Model.Category)" class="form-control">
+    <option value="Urban">Urban</option>
+    <option value="Rural">Rural</option>
+    <option value="Landmark">Landmark</option>
+    <option value="Beach">Beach</option>
+    <option value="Lake">Lake</option>
+    <option value="Waterfall">Waterfall</option>
+    <option value="Fun House">Fun House</option>
+    <option value="Desert">Desert</option>
+    <option value="Tropical">Tropical</option>
+    <option value="Event">Event</option>
+    <option value="Park">Park</option>
+    <option value="Hiking">Hiking</option>
+  </select>
+  <label for="rating">Rating</label>
+  <input type="range" name="rating" id="rating" value="@(Model.Rating)" class="form-range" min="1" max="5">
+  <label for="description">Description</label>
+  <input type="text-area" name="description" id="description" value="@(Model.DestinationDescription)" class="form-control">
+  <button class="btn btn-success mt-3" type="submit">Save Changes</button>
+</form> *@
+
 </div>
 <ol>
   @foreach (Destination destination in Model)

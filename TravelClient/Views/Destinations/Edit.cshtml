@@ -6,7 +6,7 @@
   <h1 class="display-4">Edit @Model.DestinationName</h1>
 </div>
 
-<form action="/Destinations/Details/@(Model.DestinationId)" method="post">
+<form action="/Destinations/Details/@(Model.DestinationId)" method="put">
   <label for="name">Destination Name</label>
   <input type="text" name="DestinationName" id="DestinationName" value="@(Model.DestinationName)" class="form-control">
   <label for="state">State of Province</label>
