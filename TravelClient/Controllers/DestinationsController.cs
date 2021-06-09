@@ -20,12 +20,8 @@ namespace TravelClient.Controllers
 
     public IActionResult Details(int id)
     {
-      var thisDestinations = Destination.GetDetails(id)
-      .FirstOrDefault(flavor => flavor.FlavorId == id); // were not sure about this yet?
-      return View(thisDestinations);// We need to get the details and display them. 
-
-      // var thisDestinations = Destination.FirstOrDefault(destination => destination.DestinationId == id);
-      // return View(thisDestinations);
+      var thisDestinations = Destination.GetDetails(id);
+      return View(thisDestinations);
     }
   }
 }
